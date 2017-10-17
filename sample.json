@@ -1,0 +1,14 @@
+{
+    "NeedsConfig": "True",
+    "Debug": "True",
+    "DSLR-CLI": "/opt/dslrcli-linux-amd64",
+    "Platform": "Unsure",
+    "LatLong": "0,0",
+    "TweetAt": "@FCC",
+    "DesiredSpeed": "100 Mbps",
+    "ConsumerKey": "xxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "ConsumerSecret": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "AccessToken": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "AccessSecret": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+}
+
