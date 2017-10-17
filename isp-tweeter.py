@@ -34,5 +34,5 @@ if __name__ == "__main__":
     download = int(float(results["DownSpeed"].split()[0]))
     upload = int(float(results["UpSpeed"].split()[0]))
     if match('\d+', str(download)) and match('\d+', str(upload)):
-        if download < 300 or upload < 300 or config["Debug"] == "True":
+        if download < int(config["Threshold"]) or upload < int(config["Threshold"]) or config["Debug"] == "True":
             tweet(download, upload, results["Url"], config)

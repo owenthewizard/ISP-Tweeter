@@ -1,6 +1,7 @@
 {
     "NeedsConfig": "True",
     "Debug": "True",
+    "Threshold": "10",
     "DSLR-CLI": "/opt/dslrcli-linux-amd64",
     "Platform": "Unsure",
     "LatLong": "0,0",
