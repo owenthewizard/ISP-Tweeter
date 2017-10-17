@@ -14,4 +14,4 @@ Send a tweet to your ISP (or anyone else) when your internet speed drops. Uses t
 
 ## Config
 
-Many aspects can be changed via the JSON config. See [sample.json](sample.json)
+Many aspects can be changed via the JSON config. See [sample.json](sample.json), or check the [Wiki](https://github.com/owenthewizard/ISP-Tweeter/wiki).
