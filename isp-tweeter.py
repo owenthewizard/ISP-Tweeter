@@ -19,7 +19,7 @@ def tweet(dload, uload, link, cfg):
         api.update_status("This is a test tweet... %d Mbps download \
                 and %d Mbps upload. %s" % (dload, uload, link))
     else:
-        update_status("Why do I pay for %s when I'm only getting \
+        api.update_status("Why do I pay for %s when I'm only getting \
                 %d Mbps download and %d Mbps upload? %s %s" \
                 % (cfg["DesiredSpeed"], dload, uload, cfg["TweetAt"], link))
 
