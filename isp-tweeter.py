@@ -16,9 +16,12 @@ def tweet(dload, uload, link, cfg):
     api = API(auth)
 
     if cfg["Debug"] == "True":
-        api.update_status("This is a test tweet... %d Mbps download and %d Mbps upload. %s" % (dload, uload, link))
+        api.update_status("This is a test tweet... %d Mbps download \
+                and %d Mbps upload. %s" % (dload, uload, link))
     else:
-        update_status("Why do I pay for %s when I'm only getting %d Mbps download and %d Mbps upload? %s %s" % (cfg["DesiredSpeed"], dload, uload, cfg["TweetAt"], link))
+        update_status("Why do I pay for %s when I'm only getting \
+                %d Mbps download and %d Mbps upload? %s %s" \
+                % (cfg["DesiredSpeed"], dload, uload, cfg["TweetAt"], link))
 
 
 if __name__ == "__main__":
@@ -27,12 +30,16 @@ if __name__ == "__main__":
         exit("Please modify your config")
 
     with TemporaryDirectory() as tempdir:
-        args = [config["DSLR-CLI"], "--ipv4", "--platform " + config["Platform"], "--latlong " + config["LatLong"], "-o json"]
+        args = [config["DSLR-CLI"], "--ipv4", "--platform " \
+                + config["Platform"], "--latlong " \
+                + config["LatLong"], "-o json"]
         Popen(' '.join(args), shell=True, cwd=tempdir).wait()
         results = loads(open(tempdir + "/results.json").read())
 
     download = int(float(results["DownSpeed"].split()[0]))
     upload = int(float(results["UpSpeed"].split()[0]))
     if match('\d+', str(download)) and match('\d+', str(upload)):
-        if download < int(config["Threshold"]) or upload < int(config["Threshold"]) or config["Debug"] == "True":
+        if download < int(config["Threshold"]) \
+                or upload < int(config["Threshold"]) \
+                or config["Debug"] == "True":
             tweet(download, upload, results["Url"], config)
